@@ -5,17 +5,26 @@ import moduleplan from './moduleplan.json';
 import users from './users.json';
 
 class Home extends React.Component {
+  constructor() {
+    super();
+    this.state = {semesters: []}
+  }
+
+  componentDidMount() {
+    this.loadSemestersForUser();
+  }
+
   render() {
-    var semesters = this.getSemestersForUser();
+    var semesters = this.state.semesters;
     return (
       <div>
-        <ModulePlan semesters={semesters}/>
+        <ModulePlan semesters={semesters} onSelectModule={this.selectModule.bind(this)}/>
         <PlanningSection />
       </div>
     );
   }
 
-   getSemestersForUser() {
+   loadSemestersForUser() {
     var userModules = users.students[0].tracked_modules;
     var modules = moduleplan.degree_course.modules;
     var semesters = [1,2,3,4,5,6].map(function(semester) {
@@ -32,8 +41,13 @@ class Home extends React.Component {
         }
       });
     });
-    return semesters;
+    this.setState({semesters: semesters});
   }
+
+    selectModule(module_id) {
+      console.log(module_id);
+      this.setState({ status: "selected"});
+    }
 }
 
 export default Home

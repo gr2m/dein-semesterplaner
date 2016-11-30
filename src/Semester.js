@@ -7,7 +7,7 @@ class Semester extends React.Component {
       <div key={this.props.semester}>
         <legend>{this.props.semester}. Semester</legend>
         {this.props.modules.map((module, i) =>
-          (<Module module={module.module} userModule={module.userModule} key={i} />)
+          (<Module module={module.module} userModule={module.userModule} onSelectModule={this.props.onSelectModule} key={i} />)
         )
         }
       </div>

@@ -6,9 +6,9 @@ class ModulePlan extends React.Component {
     return (
       <div>
         Regelstudienplan
-        {this.props.semesters.map(function(semester, index) {
+        {this.props.semesters.map((semester, index) => {
           return (
-            <Semester semester={index+1} modules={semester} />
+            <Semester semester={index+1} modules={semester} onSelectModule={this.props.onSelectModule}/>
           )
         })
         }
