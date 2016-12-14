@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import ModulePlan from './ModulePlan';
 import PlanningSection from './PlanningSection';
+import CourseSchedule from './CourseSchedule';
 import moduleplan from './moduleplan.json';
 import users from './users.json';
 
@@ -96,6 +97,7 @@ class Home extends React.Component {
       <Header performLogin={this.performLogin.bind(this)} performLogout={this.performLogout.bind(this)}/>
       <ModulePlan semesters={semesters}/>
       <PlanningSection totalCreditPoints={totalCreditPoints} currentCreditPoints={currentCreditPoints} selectedCoursesCounter={selectedCoursesCounter} />
+      <CourseSchedule/>
       </div>
     );
   }
