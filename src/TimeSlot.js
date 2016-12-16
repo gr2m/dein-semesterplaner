@@ -3,7 +3,8 @@ import React from 'react';
 class TimeSlot extends React.Component {
   render() {
     return (
-      <div> hallo </div>
+      <div> {this.props.time}
+      </div>
     )
   }
 }

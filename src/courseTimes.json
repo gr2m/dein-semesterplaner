@@ -1,0 +1,29 @@
+{
+      "id": 1,
+      "weekday" : "Monday",
+      "timeslots":
+      [
+        {
+        "starttime": 8.00,
+        "endtime": 9.30,
+        },
+        {
+          "starttime": 9.45,
+          "endtime": 11.15,
+        },
+        {
+          "starttime": 12.15,
+          "endtime": 13.45,
+        },
+        {
+          "starttime": 14.00,
+          "endtime": 15.30,
+        },
+        {
+          "starttime": 15.45,
+          "endtime":17.15,
+        }
+      ]
+}
+   
+
