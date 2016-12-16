@@ -9,7 +9,7 @@ getTimeSlots() {
     { id:2, starttime:'9.45'},
     { id:3, starttime:'12.15'},
     { id:4, starttime:'14.00'},
-    { id:5, starttime:'15.45'},
+    { id:5, starttime:'15.45'}
     ];
     return sessions.map((slot) => {
       return(
@@ -22,9 +22,12 @@ getTimeSlots() {
 
   	var timeslots= this.getTimeSlots();
     return (
-   		<div> {this.props.name} 
+    	<tablebody>
+   		<th> 
+   		{this.props.name}  
+   		</th>
    		<TimeSlot time={timeslots}/>
-   		</div>
+   		</tablebody>
     )
   }
 }
